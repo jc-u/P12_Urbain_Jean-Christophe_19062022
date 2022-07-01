@@ -8,7 +8,9 @@ import { IActivities } from '../types'
 import Activities from '../API/Activities'
 import { IAverage } from '../types'
 import Average from '../API/Average'
+import LineGraph from '../components/LineGraph'
 import RadarGraph from '../components/RadarGraph'
+import CircleGraph from '../components/CircleGraph'
 import UserMetrics from '../components/UserMetrics'
 import HorizontalNav from '../components/HorizontalNav'
 import VerticalNav from '../components/VerticalNav'
@@ -55,8 +57,10 @@ import VerticalNav from '../components/VerticalNav'
           {user && <h1 className="welcome">Bonjour <span className="user__name">{user.userInfos.firstName}</span></h1>}
         <span> Félicitations ! Vous avez explosé vos objectifs hier 👏</span>
           <div className="dashboard__charts">
-            {user && <UserMetrics keyData={user.keyData}/>}
+            {average && <LineGraph sessions={average.sessions}/>}
             {performance && <RadarGraph data={performance.data} kind={performance.kind}/>}
+            {user && <CircleGraph score={user.score}/>}
+            {user && <UserMetrics keyData={user.keyData}/>}
           </div>
         </div>
       </div>

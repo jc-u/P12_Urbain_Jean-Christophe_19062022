@@ -32,7 +32,6 @@ const RadarGraph: React.FC<IProps> = ({ data, kind }: IProps) => {
   })
 
   return (
-    <ResponsiveContainer width='100%' height='100%' className='chart__performance'>
       <RadarChart
         cx='50%'
         cy='50%'
@@ -52,7 +51,6 @@ const RadarGraph: React.FC<IProps> = ({ data, kind }: IProps) => {
           fillOpacity={0.6}
         />
       </RadarChart>
-    </ResponsiveContainer>
   )
 }
 
