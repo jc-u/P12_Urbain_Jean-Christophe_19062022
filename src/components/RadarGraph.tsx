@@ -24,6 +24,7 @@ const RadarGraph: React.FC<IProps> = ({ data, kind }: IProps) => {
     'Intensité'
   }
 
+ /* It's a map function that takes the data from the props and maps it to a new array. */
   const chartData = data.map(performance => {
     return {
       value: performance.value,
@@ -32,6 +33,8 @@ const RadarGraph: React.FC<IProps> = ({ data, kind }: IProps) => {
   })
 
   return (
+  <div className='chart__radargraph'>
+    <ResponsiveContainer>
       <RadarChart
         cx='50%'
         cy='50%'
@@ -51,6 +54,8 @@ const RadarGraph: React.FC<IProps> = ({ data, kind }: IProps) => {
           fillOpacity={0.6}
         />
       </RadarChart>
+    </ResponsiveContainer>
+  </div>
   )
 }
 

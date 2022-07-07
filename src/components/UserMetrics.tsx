@@ -36,7 +36,7 @@ const UserMetrics: FC<IProps> = ({ keyData }: IProps) => {
   ]
 
   return (
-        <div className="chart-metrics">
+        <div className="chart__metrics">
           {
             metricsTable.map(object => {
               return <Metric key={object.metric} value={object.value} name={object.metric} unit={object.unit}/>

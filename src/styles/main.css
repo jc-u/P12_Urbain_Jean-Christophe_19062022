@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+a {
+  font-size: 24px;
+}
+
+.home__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.connect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: bold;
+}
+
+.connect a {
+  text-decoration: none;
+  color: #74798C;
+  font-size: 20px;
+}
+
+.horizontal__nav {
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.horizontal__nav .logo {
+  height: 50px;
+  margin-left: 5px;
+}
+
+.horizontal__nav .nav-link {
+  text-decoration: none;
+  color: white;
+  margin: 0 20px;
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+.horizontal__nav .navlink.active {
+  text-decoration: none;
+  color: white;
+}
+
+.vertical__nav {
+  position: relative;
+  width: 70px;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 780px;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.vertical__nav .nav-icon {
+  height: 60px;
+  width: 60px;
+  margin: 5px 0;
+}
+
+.vertical__nav .copyright {
+  color: white;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 12px;
+  position: absolute;
+  bottom: 80px;
+}
+
+.dashboard__main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70px 1fr;
+      grid-template-columns: 70px 1fr;
+}
+
+.dashboard__main .dashboard__container {
+  padding: 1% 2%;
+  right: 0;
+  bottom: 0;
+  left: 50px;
+  top: 50px;
+}
+
+.dashboard__main .dashboard__container .welcome {
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.dashboard__main .dashboard__container .welcome .user__name {
+  color: #FF0101;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts {
+  margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "a a a b" "c d e b";
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  gap: 3% 2%;
+  height: 50%;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .chart__bargraph {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: a;
+  height: 300px;
+  background-color: #FBFBFB;
+  padding: 5px;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend--title {
+  font-weight: bold;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend__values--ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend__values--ul li {
+  margin-left: 5px;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend__values--ul li:before {
+  display: inline-block;
+  content: '';
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend__values--ul li:first-child {
+  color: #282D30;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend__values--ul li:first-child:before {
+  background-color: #282D30;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend__values--ul li:last-child {
+  color: #E60000;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend__values--ul li:last-child:before {
+  background-color: #E60000;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .bargraph__chart__tooltip {
+  background-color: #FF0101;
+  color: white;
+  padding: 5px;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .recharts-text.recharts-cartesian-axis-tick-value {
+  font-size: 12px;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .chart__metrics {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5px;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .chart__metrics .metric {
+  background-color: #FBFBFB;
+  padding: 15px;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .chart__linegraph {
+  margin-top: 30px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: c;
+  background: -webkit-gradient(linear, left top, right top, from(#ff0000), color-stop(70%, #ff0000), color-stop(70%, #e60000), to(#e60000));
+  background: linear-gradient(to right, #ff0000 0%, #ff0000 70%, #e60000 70%, #e60000 100%);
+  border-radius: 5px;
+  height: 240px;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .chart__linegraph .recharts-text.recharts-cartesian-axis-tick-value {
+  fill: white;
+  opacity: .65;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .chart__radargraph {
+  margin-top: 30px;
+  height: 240px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: d;
+  background-color: #282d30;
+  border-radius: 5px;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .chart__circlegraph {
+  margin-top: 30px;
+  height: 240px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: e;
+  background-color: #FBFBFB;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .polar-angle-axis {
+  color: white;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .recharts-layer.recharts-polar-angle-axis-tick {
+  font-size: 8px;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .recharts-polar-angle-axis-tick-value {
+  fill: white;
+}
+
+.radargraph__title {
+  color: white;
+  opacity: .65;
+}
+
+.radargraph__custom__tooltip {
+  background: white;
+  padding: 5px;
+}
+
+.metric {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px;
+}
+
+.metric .metric-data {
+  margin-left: 10px;
+}
+
+.metric .metric-value {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.metric .metric-type {
+  color: #74798C;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.chart__circlegraph .circlegraph__background {
+  width: 172px;
+  height: 172px;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+}
+
+.chart__circlegraph .circlegraph__background .circlegraph__title {
+  font-weight: bold;
+}
+
+.chart__circlegraph .circlegraph__background .circlegraph__legend {
+  font-size: 20px;
+  text-align: center;
+}
+
+.chart__circlegraph .circlegraph__background .circlegraph__legend .circlegraph__legend--graph {
+  font-weight: bold;
+}
+
+.chart__circlegraph .circlegraph__background .circlegraph__legend .circlegraph__legend--text {
+  color: #747474;
+}
+/*# sourceMappingURL=main.css.map */

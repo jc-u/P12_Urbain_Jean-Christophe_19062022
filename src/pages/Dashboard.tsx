@@ -8,6 +8,7 @@ import { IActivities } from '../types'
 import Activities from '../API/Activities'
 import { IAverage } from '../types'
 import Average from '../API/Average'
+import BarGraph from '../components/BarGraph'
 import LineGraph from '../components/LineGraph'
 import RadarGraph from '../components/RadarGraph'
 import CircleGraph from '../components/CircleGraph'
@@ -19,9 +20,12 @@ import VerticalNav from '../components/VerticalNav'
  *
  * @returns {JSX}
  */
+ /* Using the useEffect hook to call the Main, Performance, Activity, and Average classes. */
  const Dashboard: FC = () => {
+ /* Getting the id from the url. */
   const { id }:any = useParams()
   
+/* This is the useState hook. It is used to store the data that is returned from the API calls. */
   const numId = parseInt(id)
   const [user, setUser] = useState<IMain>()
   const [activity, setActivity] = useState<IActivities>()
@@ -53,13 +57,14 @@ import VerticalNav from '../components/VerticalNav'
       {<HorizontalNav/>}
       <div className="dashboard__main">
         {<VerticalNav />}
-        <div className="dashboard__content">
+        <div className="dashboard__container">
           {user && <h1 className="welcome">Bonjour <span className="user__name">{user.userInfos.firstName}</span></h1>}
         <span> Félicitations ! Vous avez explosé vos objectifs hier 👏</span>
           <div className="dashboard__charts">
+            {activity && <BarGraph sessions={activity.sessions}/>}
             {average && <LineGraph sessions={average.sessions}/>}
             {performance && <RadarGraph data={performance.data} kind={performance.kind}/>}
-            {user && <CircleGraph score={user.score}/>}
+            {user && <CircleGraph todayScore={user.todayScore}/>}
             {user && <UserMetrics keyData={user.keyData}/>}
           </div>
         </div>

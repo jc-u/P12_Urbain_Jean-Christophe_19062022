@@ -1,0 +1,29 @@
+.horizontal__nav {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  .logo {
+  height: 50px;
+  margin-left: 5px;
+}
+
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
+    padding: 20px 0;
+    font-size: 20px;
+  }
+
+  .navlink.active {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+
+
+
+

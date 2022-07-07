@@ -1,0 +1,144 @@
+.dashboard__main {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  .dashboard__container { 
+    padding: 1% 2%;
+    right: 0;
+    bottom: 0;
+    left: 50px;
+    top: 50px;
+    .welcome {
+      font-weight: 700;
+      font-size: 40px;
+      margin-bottom: 5px;
+      .user__name {
+        color: $textRed;
+      }
+    }
+    
+    .dashboard__charts {
+      margin-top: 50px;
+      display: grid;
+      grid-template-areas:    "a a a b"
+                              "c d e b";
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 3% 2%;
+      height: 50%;
+      
+      .chart__bargraph {
+        grid-area: a;
+        height: 300px;
+        background-color: $bgGrey;
+        padding: 5px;
+
+        .chart__bargraph__legend {
+          display: flex;
+          justify-content: space-between;
+        }
+        
+        .chart__bargraph__legend--title {
+          font-weight: bold;
+        }
+        .chart__bargraph__legend__values--ul {
+          display: flex;  
+        
+          & li {
+              margin-left: 5px;
+          }
+          & li:before {
+              display: inline-block;
+              content: '';
+              width: 0.5em; height: 0.5em;
+              border-radius: 50%;
+              margin-right: 5px;
+          }
+          & li:first-child {
+              color: #282D30;
+              &:before {
+                  background-color: #282D30;
+              }
+          }
+          & li:last-child {
+              color: #E60000;
+              &:before {
+                  background-color: #E60000;
+              }
+          }
+        }
+        
+        .bargraph__chart__tooltip {
+          background-color: $textRed;
+          color: white;
+          padding: 5px;
+        }
+      }
+    
+    .recharts-text.recharts-cartesian-axis-tick-value {
+      font-size: 12px;
+    }
+    
+    .chart__metrics {
+      grid-area: b;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      padding: 5px;
+      
+      .metric {
+        background-color: $bgGrey;
+        padding: 15px;
+      }
+    }
+    
+    
+    .chart__linegraph {
+      margin-top: 30px;
+      grid-area: c;
+      background: linear-gradient(to right, #ff0000 0%, #ff0000 70%, #e60000 70%, #e60000 100%);
+      border-radius: 5px;
+      height: 240px;
+    
+      & .recharts-text.recharts-cartesian-axis-tick-value {
+          fill: white;
+          opacity: .65;
+      }
+    }
+    
+    .chart__radargraph {
+      margin-top: 30px;
+      height: 240px;
+      grid-area: d;
+      background-color: #282d30;
+      border-radius: 5px;
+    }
+    
+    .chart__circlegraph {
+      margin-top: 30px;
+      height: 240px;
+      grid-area: e;
+      background-color: $bgGrey;
+    }
+    
+    .polar-angle-axis {
+      color: white;
+    }
+    
+    .recharts-layer.recharts-polar-angle-axis-tick {
+      font-size: 8px;
+    }
+    .recharts-polar-angle-axis-tick-value {
+      fill: white;
+    }
+  }
+}
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+.vertical__nav {
+  position: relative;
+  width: 70px;
+  background-color: black;
+  display: flex;
+  min-height: 780px;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  .nav-icon {
+  height: 60px;
+  width: 60px;
+  margin: 5px 0;
+}
+
+.copyright {
+  color: white;
+  transform: rotate(-90deg);
+  width: max-content;
+  font-size: 12px;
+  position: absolute;
+  bottom: 80px;
+}
+
+}
+
+

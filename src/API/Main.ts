@@ -1,6 +1,7 @@
 import { IMain } from '../types'
 import HTTP from './HTTP'
 
+/* The class Main extends the HTTP class and implements the IMain interface */
 class Main extends HTTP<IMain> {
     id: number
     constructor(id: number) {

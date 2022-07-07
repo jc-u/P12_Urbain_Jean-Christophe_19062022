@@ -14,7 +14,7 @@ interface IUserInfo {
   interface IMain {
     id: number
     userInfos: IUserInfo
-    score: number
+    todayScore: number
     keyData: IMetrics
   }
 

@@ -44,6 +44,8 @@ const LineGraph: FC<IProps> = ({ sessions }: IProps) => {
     return null
   }
   return (
+    <div className='chart__linegraph'>
+      <ResponsiveContainer>
         <LineChart
         width={500}
         height={250}
@@ -73,6 +75,8 @@ const LineGraph: FC<IProps> = ({ sessions }: IProps) => {
         />
         <Legend verticalAlign='top' align='left' content={LineGraphTitle}/>
       </LineChart>
+    </ResponsiveContainer>
+  </div>
   )
 }
 
