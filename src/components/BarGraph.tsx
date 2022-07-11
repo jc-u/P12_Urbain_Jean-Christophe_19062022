@@ -49,25 +49,27 @@ const Activity: FC<IProps> = ({ sessions }: IProps) => {
         height={300}
         data={data}
         margin={{
-          top: 5,
-          right: 30,
-          left: 20,
-          bottom: 5
+          top: 40,
+          right: 0,
+          left: 40,
+          bottom: 80
         }}
       >
         <CartesianGrid strokeDasharray="3 3" vertical={false} />
         <XAxis dataKey="day"
-          tickMargin={16}
+          tickMargin={20}
           tickSize={0}
           minTickGap={30}
-          tickLine={false}/>
+          tickLine={false}
+          padding={{ left: -50, right: -50 }}/>
+          
         <YAxis
         yAxisId='weight'
         domain={['dataMin-1', 'dataMax+2']}
         orientation='right'
         axisLine={false}
         tickLine={false}
-        tickMargin={5}
+        tickMargin={20}
         tickCount={3}
         />
         <YAxis
@@ -84,6 +86,7 @@ const Activity: FC<IProps> = ({ sessions }: IProps) => {
           fill="#282D30"
           barSize={7}
           radius={[5, 5, 0, 0]}/>
+          
         <Bar
           yAxisId="calories"
           dataKey="calories"

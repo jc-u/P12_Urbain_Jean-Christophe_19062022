@@ -1,7 +1,31 @@
 .metric {
   display: flex;
   align-items: center;
-  margin: 5px;
+  width: 136px;
+  height: 124px;
+
+  .metric-data {
+    margin-left: 10px;
+  }
+  
+  .metric-value {
+    font-weight: 700;
+    font-size: 11px;
+  }
+  
+  .metric-type {
+    color: #74798C;
+    font-weight: 500;
+    font-size: 10px;
+   }
+  }
+
+@media (min-width: 1280px) {
+.metric {
+  display: flex;
+  align-items: center;
+  width: 230px;
+  height: 124px;
 
   .metric-data {
     margin-left: 10px;
@@ -16,6 +40,29 @@
     color: #74798C;
     font-weight: 500;
     font-size: 14px;
+   }
   }
 }
+@media (min-width: 1920px) {
+.metric {
+  display: flex;
+  align-items: center;
+  width: 258px;
+  height: 124px;
 
+  .metric-data {
+    margin-left: 10px;
+  }
+  
+  .metric-value {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  
+  .metric-type {
+    color: #74798C;
+    font-weight: 500;
+    font-size: 14px;
+   }
+  }
+}

@@ -10,7 +10,7 @@ abstract class HTTP <T> {
       .then(response => response.json())
       .then((data) => {console.log(data)
         return data.data
-        
+        console.log(data)
       })
       .catch(error => console.log("Erreur : " + error));
   }

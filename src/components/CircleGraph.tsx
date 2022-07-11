@@ -3,6 +3,7 @@ import { RadialBarChart, RadialBar, ResponsiveContainer, Legend } from 'recharts
 
 interface IProps {
   todayScore: number
+  score: number
 }
 
 /**
@@ -10,14 +11,14 @@ interface IProps {
  * @param todayScore
  * @returns {JSX}
  */
-const CircleGraph: FC<IProps> = ({ todayScore }: IProps) => {
+const CircleGraph: FC<IProps> = ({ todayScore, score }: IProps) => {
   const data = [
     {
       uv: 100,
       display: 'none'
     },
     {
-      uv: todayScore * 100,
+      uv: todayScore * 100 || score * 100,
       fill: '#ff0000'
     }
   ]
@@ -25,7 +26,7 @@ const CircleGraph: FC<IProps> = ({ todayScore }: IProps) => {
   const CircleGraphLegend = () => {
     return (
       <div className="circlegraph__legend">
-        <div className="circlegraph__legend--graph">{todayScore * 100 }%</div>
+        <div className="circlegraph__legend--graph">{todayScore * 100 || score * 100}%</div>
         <div className="circlegraph__legend--text">de votre objectif</div>
       </div>
     )

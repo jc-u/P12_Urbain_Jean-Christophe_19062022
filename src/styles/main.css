@@ -49,6 +49,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 91px;
+  padding: 0 30px;
 }
 
 .horizontal__nav .logo {
@@ -71,13 +73,12 @@ a {
 
 .vertical__nav {
   position: relative;
-  width: 70px;
+  width: 117px;
   background-color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   min-height: 780px;
-  height: 100vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -116,7 +117,7 @@ a {
 }
 
 .dashboard__main .dashboard__container {
-  padding: 1% 2%;
+  padding: 3% 0% 1% 6%;
   right: 0;
   bottom: 0;
   left: 50px;
@@ -154,6 +155,7 @@ a {
   height: 300px;
   background-color: #FBFBFB;
   padding: 5px;
+  border-radius: 5px;
 }
 
 .dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend {
@@ -163,6 +165,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 20px 20px;
 }
 
 .dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend--title {
@@ -173,41 +176,46 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 280px;
 }
 
 .dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend__values--ul li {
   margin-left: 5px;
+  color: #74798C;
+  font-weight: bold;
 }
 
-.dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend__values--ul li:before {
-  display: inline-block;
-  content: '';
-  width: 0.5em;
-  height: 0.5em;
-  border-radius: 50%;
-  margin-right: 5px;
-}
-
-.dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend__values--ul li:first-child {
+.dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend__values--ul li:first-child::marker {
   color: #282D30;
 }
 
-.dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend__values--ul li:first-child:before {
-  background-color: #282D30;
-}
-
-.dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend__values--ul li:last-child {
+.dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend__values--ul li:last-child::marker {
   color: #E60000;
-}
-
-.dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend__values--ul li:last-child:before {
-  background-color: #E60000;
 }
 
 .dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .bargraph__chart__tooltip {
   background-color: #FF0101;
   color: white;
   padding: 5px;
+  width: 39px;
+  height: 63px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 7px;
+  line-height: 24px;
 }
 
 .dashboard__main .dashboard__container .dashboard__charts .recharts-text.recharts-cartesian-axis-tick-value {
@@ -222,14 +230,13 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 5px;
 }
 
 .dashboard__main .dashboard__container .dashboard__charts .chart__metrics .metric {
@@ -238,14 +245,24 @@ a {
 }
 
 .dashboard__main .dashboard__container .dashboard__charts .chart__linegraph {
-  margin-top: 30px;
+  margin-top: 15px;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: c;
-  background: -webkit-gradient(linear, left top, right top, from(#ff0000), color-stop(70%, #ff0000), color-stop(70%, #e60000), to(#e60000));
-  background: linear-gradient(to right, #ff0000 0%, #ff0000 70%, #e60000 70%, #e60000 100%);
+  background-color: #FF0000;
   border-radius: 5px;
-  height: 240px;
+  width: 230px;
+  height: 230px;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .chart__linegraph .linegraph__title {
+  color: white;
+  opacity: 0.5;
+  width: 140px;
+  height: 48px;
+  font-size: 15px;
+  line-height: 24px;
+  margin: 20px 0 0 20px;
 }
 
 .dashboard__main .dashboard__container .dashboard__charts .chart__linegraph .recharts-text.recharts-cartesian-axis-tick-value {
@@ -253,9 +270,29 @@ a {
   opacity: .65;
 }
 
+.dashboard__main .dashboard__container .dashboard__charts .chart__linegraph .linegraph__custom--tooltip {
+  background-color: white;
+  width: 39px;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard__main .dashboard__container .dashboard__charts .chart__linegraph .label {
+  font-size: 8px;
+}
+
 .dashboard__main .dashboard__container .dashboard__charts .chart__radargraph {
-  margin-top: 30px;
-  height: 240px;
+  margin-top: 15px;
+  width: 230px;
+  height: 230px;
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: d;
@@ -264,12 +301,28 @@ a {
 }
 
 .dashboard__main .dashboard__container .dashboard__charts .chart__circlegraph {
-  margin-top: 30px;
-  height: 240px;
+  margin-top: 15px;
+  width: 230px;
+  height: 230px;
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: e;
   background-color: #FBFBFB;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
 }
 
 .dashboard__main .dashboard__container .dashboard__charts .polar-angle-axis {
@@ -282,6 +335,213 @@ a {
 
 .dashboard__main .dashboard__container .dashboard__charts .recharts-polar-angle-axis-tick-value {
   fill: white;
+}
+
+@media (min-width: 1280px) {
+  .dashboard__main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 70px 1fr;
+        grid-template-columns: 70px 1fr;
+  }
+  .dashboard__main .dashboard__container {
+    padding: 2% 8%;
+    right: 0;
+    bottom: 0;
+    left: 50px;
+    top: 50px;
+    height: calc(100vh - 91px);
+  }
+  .dashboard__main .dashboard__container .welcome {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
+  .dashboard__main .dashboard__container .welcome .user__name {
+    color: #FF0101;
+  }
+  .dashboard__main .dashboard__container .dashboard__charts {
+    margin-top: 50px;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "a a a b" "c d e b";
+    -ms-grid-columns: 0fr 0fr 0fr 0fr;
+        grid-template-columns: 0fr 0fr 0fr 0fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    gap: 3% 2%;
+    height: 50%;
+  }
+  .dashboard__main .dashboard__container .dashboard__charts .chart__bargraph {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: a;
+    height: 320px;
+    width: 835px;
+    background-color: #FBFBFB;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 20px 20px;
+  }
+  .dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend--title {
+    font-weight: bold;
+  }
+  .dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend__values--ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 280px;
+  }
+  .dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend__values--ul li {
+    margin-left: 5px;
+    color: #74798C;
+    font-weight: bold;
+  }
+  .dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend__values--ul li:first-child::marker {
+    color: #282D30;
+  }
+  .dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .chart__bargraph__legend__values--ul li:last-child::marker {
+    color: #E60000;
+  }
+  .dashboard__main .dashboard__container .dashboard__charts .chart__bargraph .bargraph__chart__tooltip {
+    background-color: #FF0101;
+    color: white;
+    padding: 5px;
+    width: 39px;
+    height: 63px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 7px;
+    line-height: 24px;
+  }
+  .dashboard__main .dashboard__container .dashboard__charts .recharts-text.recharts-cartesian-axis-tick-value {
+    font-size: 12px;
+  }
+  .dashboard__main .dashboard__container .dashboard__charts .chart__metrics {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 4;
+    grid-area: b;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .dashboard__main .dashboard__container .dashboard__charts .chart__metrics .metric {
+    background-color: #FBFBFB;
+    padding: 15px;
+  }
+  .dashboard__main .dashboard__container .dashboard__charts .chart__linegraph {
+    margin-top: 25px;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: c;
+    background-color: #FF0000;
+    border-radius: 5px;
+    width: 258px;
+    height: 263px;
+  }
+  .dashboard__main .dashboard__container .dashboard__charts .chart__linegraph .linegraph__title {
+    color: white;
+    opacity: 0.5;
+    width: 140px;
+    height: 48px;
+    font-size: 15px;
+    line-height: 24px;
+    margin: 20px 0 0 20px;
+  }
+  .dashboard__main .dashboard__container .dashboard__charts .chart__linegraph .recharts-text.recharts-cartesian-axis-tick-value {
+    fill: white;
+    opacity: .65;
+  }
+  .dashboard__main .dashboard__container .dashboard__charts .chart__linegraph .linegraph__custom--tooltip {
+    background-color: white;
+    width: 39px;
+    height: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .dashboard__main .dashboard__container .dashboard__charts .chart__linegraph .label {
+    font-size: 8px;
+  }
+  .dashboard__main .dashboard__container .dashboard__charts .chart__radargraph {
+    margin-top: 25px;
+    width: 258px;
+    height: 263px;
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: d;
+    background-color: #282d30;
+    border-radius: 5px;
+  }
+  .dashboard__main .dashboard__container .dashboard__charts .chart__circlegraph {
+    margin-top: 25px;
+    width: 258px;
+    height: 263px;
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: e;
+    background-color: #FBFBFB;
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+  }
+  .dashboard__main .dashboard__container .dashboard__charts .polar-angle-axis {
+    color: white;
+  }
+  .dashboard__main .dashboard__container .dashboard__charts .recharts-layer.recharts-polar-angle-axis-tick {
+    font-size: 8px;
+  }
+  .dashboard__main .dashboard__container .dashboard__charts .recharts-polar-angle-axis-tick-value {
+    fill: white;
+  }
 }
 
 .radargraph__title {
@@ -301,7 +561,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 5px;
+  width: 136px;
+  height: 124px;
 }
 
 .metric .metric-data {
@@ -310,25 +571,71 @@ a {
 
 .metric .metric-value {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 11px;
 }
 
 .metric .metric-type {
   color: #74798C;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 10px;
+}
+
+@media (min-width: 1280px) {
+  .metric {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 230px;
+    height: 124px;
+  }
+  .metric .metric-data {
+    margin-left: 10px;
+  }
+  .metric .metric-value {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  .metric .metric-type {
+    color: #74798C;
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .metric {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 258px;
+    height: 124px;
+  }
+  .metric .metric-data {
+    margin-left: 10px;
+  }
+  .metric .metric-value {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  .metric .metric-type {
+    color: #74798C;
+    font-weight: 500;
+    font-size: 14px;
+  }
 }
 
 .chart__circlegraph .circlegraph__background {
-  width: 172px;
-  height: 172px;
   background-color: white;
   border-radius: 50%;
   position: relative;
-}
-
-.chart__circlegraph .circlegraph__background .circlegraph__title {
-  font-weight: bold;
+  width: 172px;
+  height: 172px;
 }
 
 .chart__circlegraph .circlegraph__background .circlegraph__legend {
@@ -342,5 +649,44 @@ a {
 
 .chart__circlegraph .circlegraph__background .circlegraph__legend .circlegraph__legend--text {
   color: #747474;
+  line-height: 26px;
+  width: 95px;
+  margin: 0 auto;
+}
+
+.chart__circlegraph .circlegraph__title {
+  font-weight: bold;
+  position: absolute;
+  top: 7%;
+  left: 5%;
+}
+
+@media (min-width: 1920px) {
+  .chart__circlegraph .circlegraph__background {
+    width: 172px;
+    height: 172px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+  }
+  .chart__circlegraph .circlegraph__background .circlegraph__legend {
+    font-size: 20px;
+    text-align: center;
+  }
+  .chart__circlegraph .circlegraph__background .circlegraph__legend .circlegraph__legend--graph {
+    font-weight: bold;
+  }
+  .chart__circlegraph .circlegraph__background .circlegraph__legend .circlegraph__legend--text {
+    color: #747474;
+    line-height: 26px;
+    width: 95px;
+    margin: 0 auto;
+  }
+  .chart__circlegraph .circlegraph__title {
+    font-weight: bold;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

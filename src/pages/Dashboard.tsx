@@ -64,7 +64,7 @@ import VerticalNav from '../components/VerticalNav'
             {activity && <BarGraph sessions={activity.sessions}/>}
             {average && <LineGraph sessions={average.sessions}/>}
             {performance && <RadarGraph data={performance.data} kind={performance.kind}/>}
-            {user && <CircleGraph todayScore={user.todayScore}/>}
+            {user && <CircleGraph todayScore={user.todayScore} score={user.score}/>}
             {user && <UserMetrics keyData={user.keyData}/>}
           </div>
         </div>

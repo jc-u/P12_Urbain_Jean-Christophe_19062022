@@ -1,15 +1,13 @@
 .chart__circlegraph {
 
   .circlegraph__background {
-    width: 172px;
-    height: 172px;
     background-color: white;
     border-radius: 50%;
     position: relative;
+    width: 172px;
+    height: 172px;
   
-  .circlegraph__title {
-    font-weight: bold;
-}
+
 
   .circlegraph__legend {
    font-size: 20px;
@@ -21,11 +19,59 @@
  
   .circlegraph__legend--text {
     color: #747474;
+    line-height: 26px;
+    width: 95px;
+    margin: 0 auto;
       }
     }
   } 
-}
 
+  .circlegraph__title {
+    font-weight: bold;
+    position: absolute;
+    top: 7%;
+    left: 5%;
+    }
+  }
+
+@media (min-width: 1920px) {
+.chart__circlegraph {
+
+  .circlegraph__background {
+    width: 172px;
+    height: 172px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+
+  
+
+
+  .circlegraph__legend {
+   font-size: 20px;
+   text-align: center;
+
+   .circlegraph__legend--graph {
+    font-weight: bold;
+  }
+ 
+  .circlegraph__legend--text {
+    color: #747474;
+    line-height: 26px;
+    width: 95px;
+    margin: 0 auto;
+      }
+    }
+  } 
+
+  .circlegraph__title {
+    font-weight: bold;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    }
+  }
+}
  
 
  
