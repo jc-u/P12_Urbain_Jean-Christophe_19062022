@@ -5,6 +5,11 @@ import Icon2 from '../assets/icon2.svg'
 import Icon3 from '../assets/icon3.svg'
 import Icon4 from '../assets/icon4.svg'
 
+/**
+ * HorizontalNav componant
+ * @returns {JSX}
+ */
+
 const VerticalNav: FC = () => {
   return (
         <div className="vertical__nav">

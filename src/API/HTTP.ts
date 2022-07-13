@@ -1,4 +1,5 @@
 /* A class that is used to fetch data from an API. */
+
 abstract class HTTP <T> {
   protected async get(url: string): Promise<T> {
     return fetch(url, {
@@ -10,7 +11,6 @@ abstract class HTTP <T> {
       .then(response => response.json())
       .then((data) => {console.log(data)
         return data.data
-        console.log(data)
       })
       .catch(error => console.log("Erreur : " + error));
   }

@@ -1,17 +1,13 @@
 import React, { FC } from 'react'
-import { IMetrics } from '../types'
 import Metric from './Metric'
-
-interface IProps {
-  keyData: IMetrics
-}
+import IUserMetrics from '../lib/IUserMetrics'
 
 /**
  *
  * @param object
  * @returns {JSX}
  */
-const UserMetrics: FC<IProps> = ({ keyData }: IProps) => {
+const UserMetrics: FC<IUserMetrics> = ({ keyData }: IUserMetrics) => {
   const metricsTable = [
     {
       metric: 'Calories',

@@ -17,7 +17,7 @@ import HorizontalNav from '../components/HorizontalNav'
 import VerticalNav from '../components/VerticalNav'
 
 /**
- *
+ * UserPage page
  * @returns {JSX}
  */
  /* Using the useEffect hook to call the Main, Performance, Activity, and Average classes. */

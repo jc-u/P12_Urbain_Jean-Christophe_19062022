@@ -4,7 +4,7 @@ import VerticalNav from '../components/VerticalNav';
 import HorizontalNav from '../components/HorizontalNav';
 
 /**
- *
+ * Home page
  * @returns {JSX}
  */
 const Home: FC = () => {

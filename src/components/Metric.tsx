@@ -4,7 +4,7 @@ import GlucidesIcon from '../assets/carbs-icon.svg'
 import ProteinesIcon from '../assets/protein-icon.svg'
 import LipidesIcon from '../assets/fat-icon.svg'
 
-interface IProps {
+interface IMetric {
     value: number
     name: string
     unit: string
@@ -22,11 +22,13 @@ const iconRef: IIconRef = {
 }
 
 /**
- *
- * @param object
+ * Metric component
+ * @param {string} name
+ * @param {number} value
+ * @param {string} unit
  * @returns {JSX}
  */
-const Metric: FC <IProps> = ({ value, name, unit }:IProps) => {
+const Metric: FC <IMetric> = ({ value, name, unit }:IMetric) => {
   return (
     <div className='metric'>
       <img className='metric-icon' src={iconRef[name]} alt={`${name} icone`} />

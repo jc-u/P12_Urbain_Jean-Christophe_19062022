@@ -20,6 +20,10 @@
     "noEmit": true,
     "jsx": "preserve"
   },
+  "typedocOptions": {
+    "entryPoints": ["src/components/*.tsx"],
+    "out": "docs"
+},
   "include": [
     "src"
   ]

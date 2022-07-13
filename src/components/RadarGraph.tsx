@@ -1,19 +1,13 @@
 import React from 'react'
 import { ResponsiveContainer, Radar, RadarChart, PolarGrid, PolarAngleAxis } from 'recharts'
-import { IPerformanceData, IKind } from '../types'
-
-
-interface IProps {
-  data: IPerformanceData[]
-  kind: IKind
-}
+import IRadarGraph from '../lib/IRadarGraph'
 
 /**
- * 
- * @param object 
+ * RadarGraph component
+ * @param {Array} data 
  * @returns {JSX}
  */
-const RadarGraph: React.FC<IProps> = ({ data, kind }: IProps) => {
+const RadarGraph: React.FC<IRadarGraph> = ({ data }: IRadarGraph) => {
 
   enum Kind {
     'Cardio' = 1,
@@ -47,7 +41,6 @@ const RadarGraph: React.FC<IProps> = ({ data, kind }: IProps) => {
         <PolarAngleAxis dataKey="kind"/>
 
         <Radar
-          name="Mike"
           dataKey="value"
           stroke="#ff0000"
           fill="#ff0000"

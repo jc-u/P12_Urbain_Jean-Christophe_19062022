@@ -1,0 +1,8 @@
+{
+  "name": "My Library",
+  "out": "doc",
+  "theme": "default",
+  "external-modulemap": [
+	   "./lib/*.d.ts"
+   ]
+}

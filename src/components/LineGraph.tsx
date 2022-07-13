@@ -1,10 +1,6 @@
 import React, { FC } from 'react'
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } from 'recharts'
-import { ISession } from '../types'
-
-interface IProps {
-  sessions: ISession[]
-}
+import ILineGraph from './../lib/ILineGraph';
 
 type SessionObject = {
   name: string,
@@ -12,11 +8,11 @@ type SessionObject = {
 }
 
 /**
- *
- * @param sessions
+ * LineGraph component
+ * @param {Object} sessions
  * @returns {JSX}
  */
-const LineGraph: FC<IProps> = ({ sessions }: IProps) => {
+const LineGraph: FC<ILineGraph> = ({ sessions }: ILineGraph) => {
   const weekDays = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
   const data: SessionObject[] = []
   sessions.forEach(session => {

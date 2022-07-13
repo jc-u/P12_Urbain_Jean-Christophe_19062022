@@ -1,17 +1,17 @@
 import React, { FC } from 'react'
 import { RadialBarChart, RadialBar, ResponsiveContainer, Legend } from 'recharts'
 
-interface IProps {
+interface ICircleGraph {
   todayScore: number
   score: number
 }
 
 /**
- *
- * @param todayScore
+ * CircleGraph
+ * @param {Object} todayScore
  * @returns {JSX}
  */
-const CircleGraph: FC<IProps> = ({ todayScore, score }: IProps) => {
+const CircleGraph: FC<ICircleGraph> = ({ todayScore, score }: ICircleGraph) => {
   const data = [
     {
       uv: 100,

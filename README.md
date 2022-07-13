@@ -1,46 +1,74 @@
-# Getting Started with Create React App
+# P12: React & Recharts Dashboard / SportSee
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+[![forthebadge](./made-with-create-react-app.svg)](https://create-react-app.dev/)
+[![forthebadge](./uses-recharts.svg)](https://recharts.org/en-US/)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
 
-### `npm start`
+## Project's presentation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+SportSee is a startup dedicated to sport's coaching. The purpose of this project is to developp a brand new Dashboard's version of their application, where the user can check any important data about his sport's practice.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This project has been developped with React and <a href="https://recharts.org/en-US/">Recharts librairie</a>.
 
-### `npm test`
+Build an athletic user profile page in React, fetching data from a NodeJS server.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## To run this project you need : 
 
-### `npm run build`
+  1.Git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  2.NodeJs
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  3.npm 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Dependencies
 
-### `npm run eject`
+- [React](https://reactjs.org/) v18.2.0
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [recharts](https://recharts.org/en-US) v2.1.9
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [Sass](https://sass-lang.com/) v1.53.0
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## How to:
 
-## Learn More
+###  use this apllication you need the backend :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  1. clone this repository use ``` git clone https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  2. in your terminal use ``` npm i ```
+
+  3. to start the backend use  ``` npm run start ``` (the backend start at port:3000)
+
+  ### URL/PORT
+
+The default URL used by the micro-API is <http://localhost:3000>.
+
+###  setup and start the Front-End application:
+
+  1. clone this repository use ``` https://github.com/jc-u/P12_Urbain_Jean-Christophe_19062022 ```
+
+  2. in your terminal use  ``` npm i ```
+
+  3. to start the backend use  ``` npm start ``` (the application start at port:3001)
+
+  4. In your Browser go to : http://localhost:3001/
+
+### start Typedoc :
+
+npm i typedoc
+
+To install the latest version on npm locally and save it in your package's package.json file:
+
+npm install typedoc --save-dev
+
+this generates the docs in a folder ./docs in the root of the project.
+
+npx typedoc --out docs
+
+
+  # Documents
+
+Find the app mock-up on [Figma](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1)

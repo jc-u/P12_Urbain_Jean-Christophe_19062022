@@ -1,18 +1,15 @@
 import React, { FC } from 'react'
-import { IActivity } from '../types'
+import IBarGraph from '../lib/IBarGraph'
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
 
-interface IProps {
-  sessions: IActivity[]
-}
 type Payload = number[][]
 
 /**
- *
- * @param sessions<IActivity[]>
+ * @category Activity component
+ * @param {Object} sessions
  * @returns {JSX}
- */
-const Activity: FC<IProps> = ({ sessions }: IProps) => {
+*/
+const Activity: FC<IBarGraph> = ({ sessions }: IBarGraph) => {
   const data = []
   const payload: Payload = [[], []]
 
@@ -105,6 +102,7 @@ const Activity: FC<IProps> = ({ sessions }: IProps) => {
  * return null
  * @param {any}  - active - boolean, whether the tooltip is active or not
  */
+
 const CustomTooltip = ({ active, payload, label }: any) => active
   ? (
   <div className="bargraph__chart__tooltip">
