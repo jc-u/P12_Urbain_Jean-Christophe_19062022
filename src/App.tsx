@@ -8,7 +8,7 @@ const App: FC = () => {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<Home />}/>
+          <Route path="/P12_Urbain_Jean-Christophe_19062022" element={<Home />}/>
           <Route path="/user/:id" element={<Dashboard />} />
         </Routes>
       </Router>
