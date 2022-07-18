@@ -9,7 +9,7 @@ class Activities extends HTTP<IActivities> {
       this.id = id
     }
 
-  public getActivity() {
+  public async getActivity() {
    return this.get(`http://localhost:3000/user/${this.id}/activity`)
   }
 }

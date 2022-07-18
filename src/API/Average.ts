@@ -9,7 +9,7 @@ class Average extends HTTP<IAverage> {
       this.id = id
     }
 
-  public getAverage() {
+  public async getAverage() {
    return this.get(`http://localhost:3000/user/${this.id}/average-sessions`)
   }
 }

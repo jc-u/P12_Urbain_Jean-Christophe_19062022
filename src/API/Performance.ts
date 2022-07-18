@@ -9,7 +9,7 @@ class Performance extends HTTP<IPerformance> {
       this.id = id
     }
 
-  public getPerformance() {
+  public async getPerformance() {
    return this.get(`http://localhost:3000/user/${this.id}/performance`)
   }
 }
