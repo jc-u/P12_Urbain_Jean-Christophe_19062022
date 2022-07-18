@@ -2,9 +2,9 @@
 
 
 
-[![forthebadge](./made-with-create-react-app.svg)](https://create-react-app.dev/)
-[![forthebadge](./uses-recharts.svg)](https://recharts.org/en-US/)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
+[![forthebadge](./react.svg)](https://create-react-app.dev/)
+[![forthebadge](./recharts.svg)](https://recharts.org/en-US/)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)![Typescript](https://img.shields.io/npm/types/typescript?style=for-the-badge">)![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
 
 ## Project's presentation
 
