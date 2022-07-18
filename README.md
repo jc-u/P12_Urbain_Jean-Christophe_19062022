@@ -4,7 +4,7 @@
 
 [![forthebadge](./front/public/react.svg)](https://create-react-app.dev/)
 [![forthebadge](./front/public/recharts.svg)](https://recharts.org/en-US/)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)![Typescript](<img alt="npm type definitions" src="https://img.shields.io/npm/types/typescript?style=for-the-badge">)![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)![Typescript](https://img.shields.io/npm/types/typescript?style=for-the-badge">)![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
 
 ## Project's presentation
 
